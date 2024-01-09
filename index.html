@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Roll Roll Your Dice</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+    <h1>Roll Roll Roll Your Dice</h1>
+    <!-- https://www.w3schools.com/html/html_forms.asp -->
+    <form>
+        <label for="numDice">Dice to Roll:</label>
+        <input type = "radio" id ="1" name="numDice" value="1" checked="true">
+        <label for="1">1</label>
+        <input type = "radio" name="numDice" value="2">
+        <label for="2">2</label>
+        <input type = "radio" name="numDice" value="3">
+        <label for="3">3</label> <br>
+        <label for="numTimes"># of Rolls</label>
+        <input type ="text" id="numTimes" name="numTimes" value="1"> <br>
+        <input type="button" value="Roll Dice" onclick="rollDice(this.form)">
+    </form>
+    <table>
+        <tr>
+            <th style="width:60%">Frequencies</th>
+            <th>Mean<br>Median<br>Mode</th>
+            <th>Doubles<br>Triples</th>
+        </tr>
+    </table>
+</body>
+</html>
