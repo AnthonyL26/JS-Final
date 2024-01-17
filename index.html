@@ -9,19 +9,22 @@
     <link rel="stylesheet" href = "style.css">
 </head>
 <body>
+    <video id = "bg" autoplay loop muted>
+        <source src="videobg.mov">
+    </video>
     <h1>Roll Roll Roll Your Dice</h1>
     <!-- https://www.w3schools.com/html/html_forms.asp -->
     <form>
         <label>Dice to Roll:</label>
-        <input type = "radio" id ="1" name="numDice" value="1" checked="true">
-        <label for="1">1</label>
-        <input type = "radio" name="numDice" value="2">
-        <label for="2">2</label>
-        <input type = "radio" name="numDice" value="3">
-        <label for="3">3</label> <br>
-        <label for="numTimes"># of Rolls</label>
+        <input type = "radio" id ="1" name="numDice" value="1" checked="true" class ='radio'>
+        <label for="numDice">1</label>
+        <input type = "radio" name="numDice" value="2" class ='radio'>
+        <label for="numDice">2</label>
+        <input type = "radio" name="numDice" value="3" class ='radio'>
+        <label for="numDice">3</label> <br>
+        <label for="numTimes"># of Rolls:</label>
         <input type ="text" id="numTimes" name="numTimes" value="1"> <br>
-        <input type="button" value="Roll Dice" onclick="getInfo(this.form)">
+        <input type="button" id="button1"value="ROLL DICE" onclick="getInfo(this.form)">
     </form>
     <table>
         <tr>

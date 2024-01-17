@@ -113,15 +113,19 @@ function update(frequencies, mean, median, mode, numDice) {
         switch (i) {
             case 0:
                 outcomes = 0;
+                start = 0;
                 if (numDice == 1) {
                     outcomes = 6;
+                    start = 1;
                 } else if (numDice == 2) {
                     outcomes = 12;
+                    start = 2;
                 } else if (numDice == 3) {
                     outcomes = 18
+                    start= 3;
                 } 
                 var text = ``;
-                for (let i = 1; i <=outcomes; i++ ) {
+                for (let i = start; i <=outcomes; i++ ) {
                     if (frequencies[i] == undefined) {
                         frequencies[i] = 0;
                     }
