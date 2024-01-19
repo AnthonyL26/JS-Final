@@ -3,6 +3,7 @@ var doubles = 0;
 var triplets = 0;
 var sums = [];
 
+// Function tied to the button that will set the user inputted information into variables.
 function getInfo(form) {
     var numDice = (form.numDice.value);
     var numTimes = (form.numTimes.value);
@@ -15,6 +16,7 @@ function getInfo(form) {
     rollDice(parseInt(numDice), parseInt(numTimes));
 }
 
+//Will roll the dice according to user input
 function rollDice(numDice,numTimes) {
     sums = [];
     for (let i = 0; i < numTimes; i++) {
@@ -53,6 +55,7 @@ function rollDice(numDice,numTimes) {
     data(numDice);
 }
 
+//Does all calculations for the data that is represented in the table.
 function data(numDice) {
     sums = sums.sort();
     const sum = sums.reduce(
@@ -101,6 +104,7 @@ function random() {
     return Math.floor(Math.random() * (6) + 1)
 }
 
+//Updates the webpage with a new row in the table with the required data.
 function update(frequencies, mean, median, mode, numDice) {
     console.log(frequencies[1]);
     const table = document.querySelector('table');
@@ -146,7 +150,5 @@ function update(frequencies, mean, median, mode, numDice) {
     }
     tblBody.appendChild(row);
     table.appendChild(tblBody);
-
-
 }
 
