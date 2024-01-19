@@ -34,7 +34,7 @@ function rollDice(numDice,numTimes) {
             case 2:
             dice2=random();
             dice1=random();
-            if(dice1 == dice2) {
+            if(dice1 == dice2 || dice2 == dice3) {
                 doubles++;
             }
             case 1:
